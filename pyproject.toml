@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "MovieRec"
+author = "Ashwin Senthilkumar"
+author-email = "imashwin02@gmail.com"
+home-page = "https://github.com/MrR0b0t-23/MovieRecSys.git"
+classifiers = [ "License :: OSI Approved :: Apache Software License",]
+
