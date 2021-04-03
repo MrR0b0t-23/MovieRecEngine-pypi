@@ -14,4 +14,4 @@ pip install MovieRecEngine
 
 ## Contributing
 
-Currently, we are not accepting any pull requests! All PRs will be closed. If you want a feature or something doesn't work, please create an [issue] .
+Currently, we are not accepting any pull requests! All PRs will be closed. If you want a feature or something doesn't work, please create an [issue](https://github.com/MrR0b0t-23/MovieRecEngine/issues).
