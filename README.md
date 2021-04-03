@@ -21,16 +21,17 @@ MovieRecEngine, uses [tez](https://pypi.org/project/tez/) simple pytorch trainer
 
 ## How to use MovieRecEngine
 
-* To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]()
+* To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [Train sample]()
 * Create a object for ```Train ``` class in MovieRecEngine library with parameters trainDatasetPath, userLabelEncoderPath, movieLabelEncoderPath, validDatasetSize, trainBatchSize, validBatchSize, device, nEpochs, trainedModelPath, randomState.
 * Train the model by calling ```python train``` function in ```Train``` class.
 
-* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]()
+* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [Test sample]()
 *NOTE: "userId" needs to contain 1 unique userId.*
 * Create a object for ```Predict ``` class in MovieRecEngine library with parameters datasetPath, userLabelEncoderPath, movieLabelEncoderPath, trainedModelPath, predictBatchSize, device.
 * Predict user movie ratings by calling ```predict``` function in ```Predict ``` class.
 
 ## Parameters
+
 1. Train class: 
 - trainDatasetPath ==> Path for your training Dataset.
 - userLabelEncoderPath ==> Path in which you want to save user Label Encoder (this will be used in your prediction)
@@ -45,15 +46,13 @@ MovieRecEngine, uses [tez](https://pypi.org/project/tez/) simple pytorch trainer
 
 2. Predict class:
 
-- datasetPath
-- userLabelEncoderPath
-- movieLabelEncoderPath
-- trainedModelPath
-- predictBatchSize
-- device
+- datasetPath ==> Path for your prediction Dataset.
+- userLabelEncoderPath ==> Path in which you saved user Label Encoder (while training)
+- movieLabelEncoderPath ==>  Path in which you saved movie Label Encoder (while training)
+- trainedModelPath ==>  Path in which you saved Trained model (while training)
+- predictBatchSize ==> The number of prediction samples to work
+- device ==> Device in which you want to train your model 'cuda' or 'cpu'. Default 'cpu'.
 
 ## Contributing
 
 Currently, we are not accepting any pull requests! All PRs will be closed. If you want a feature or something doesn't work, please create an [issue](https://github.com/MrR0b0t-23/MovieRecEngine/issues).
-
-## License
