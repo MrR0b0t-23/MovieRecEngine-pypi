@@ -1,6 +1,6 @@
 # MovieRecEngine
 
-MovieRecEngine be an abbreviation of Movie Recommendation Engine. This is a simple collaborative filtering based library using Pytorch Neural Netwrok to make your Movie Recommendation System easy.
+MovieRecEngine be an abbreviation of Movie Recommendation Engine. This is a simple collaborative filtering based library using Pytorch Sequential Neural Network to make your Movie Recommendation System easy.
 
 *This library is in very early-stage currently! So, there might be remarkable changes.*
 
@@ -15,21 +15,41 @@ pip install MovieRecEngine
 
 MovieRecEngine uses collaborative filtering to find similarities between users and items simultaneously to provide recommendations. This allows for serendipitous recommendations; that is, collaborative filtering models can recommend an item to user A based on the interests of a similar user B. Furthermore, the embeddings can be learned automatically, without relying on hand-engineering of features. 
 
+MovieRecEngine uses pyptorch sequential Neural Networks to train a model that can predict users rating for an unseen movie based on his/her past interests/ratings provided. 
+
 MovieRecEngine, uses [tez](https://pypi.org/project/tez/) simple pytorch trainer that supports cpu and gpu training.
 
 ## How to use MovieRecEngine
 
-* To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [MovieLenz](https://grouplens.org/datasets/movielens/100k/) dataset.
-* Create a object for ```python Train ``` class in MovieRecEngine library with parameters trainDatasetPath, userLabelEncoderPath, movieLabelEncoderPath, validDatasetSize, trainBatchSize, validBatchSize, device, nEpochs, trainedModelPath, randomState.
-* Train the model by calling ```python train``` function in ```python Train``` class.
+* To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]() dataset.
+* Create a object for ```Train ``` class in MovieRecEngine library with parameters trainDatasetPath, userLabelEncoderPath, movieLabelEncoderPath, validDatasetSize, trainBatchSize, validBatchSize, device, nEpochs, trainedModelPath, randomState.
+* Train the model by calling ```python train``` function in ```Train``` class.
 
-* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". 
+* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]() dataset.
 *NOTE: "userId" needs to contain 1 unique userId.*
-* Create a object for ```python Predict ``` class in MovieRecEngine library with parameters datasetPath, userLabelEncoderPath, movieLabelEncoderPath, trainedModelPath, predictBatchSize, device.
-* Predict user movie ratings by calling ```python predict``` function in ```python Predict ``` class.
+* Create a object for ```Predict ``` class in MovieRecEngine library with parameters datasetPath, userLabelEncoderPath, movieLabelEncoderPath, trainedModelPath, predictBatchSize, device.
+* Predict user movie ratings by calling ```predict``` function in ```Predict ``` class.
 
 ## Parameters
+- Train class: 
+trainDatasetPath
+userLabelEncoderPath
+movieLabelEncoderPath
+validDatasetSize
+trainBatchSize 
+validBatchSize
+device
+nEpochs
+trainedModelPath
+randomState
 
+-Predict class:
+datasetPath
+userLabelEncoderPath
+movieLabelEncoderPath
+trainedModelPath
+predictBatchSize
+device
 
 ## Contributing
 
