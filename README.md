@@ -12,3 +12,6 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install MovieRe
 pip install MovieRecEngine
 ```
 
+## Contributing
+
+Currently, we are not accepting any pull requests! All PRs will be closed. If you want a feature or something doesn't work, please create an [issue] .
