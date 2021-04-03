@@ -23,16 +23,16 @@ MovieRecEngine, uses [tez](https://pypi.org/project/tez/) simple pytorch trainer
 
 * To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [Train sample]()
 * Create a object for ```Train ``` class in MovieRecEngine library with parameters trainDatasetPath, userLabelEncoderPath, movieLabelEncoderPath, validDatasetSize, trainBatchSize, validBatchSize, device, nEpochs, trainedModelPath, randomState.
-* Train the model by calling ```python train``` function in ```Train``` class.
+* Train the model by calling ```train``` function in ```Train``` class.
 
-* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [Test sample]()
+* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [Predict sample]()
 *NOTE: "userId" needs to contain 1 unique userId.*
 * Create a object for ```Predict ``` class in MovieRecEngine library with parameters datasetPath, userLabelEncoderPath, movieLabelEncoderPath, trainedModelPath, predictBatchSize, device.
 * Predict user movie ratings by calling ```predict``` function in ```Predict ``` class.
 
 ## Parameters
 
-1. Train class: 
+1. ```Train``` class: 
 - trainDatasetPath ==> Path for your training Dataset.
 - userLabelEncoderPath ==> Path in which you want to save user Label Encoder (this will be used in your prediction)
 - movieLabelEncoderPath ==> Path in which you want to save movie Label Encoder (this will be used your prediction)
@@ -44,7 +44,7 @@ MovieRecEngine, uses [tez](https://pypi.org/project/tez/) simple pytorch trainer
 - trainedModelPath ==> Path to save your trained model (this will be used in your prediction)
 - randomState ==> Random State values for train_test_split
 
-2. Predict class:
+2. ```Predict``` class:
 
 - datasetPath ==> Path for your prediction Dataset.
 - userLabelEncoderPath ==> Path in which you saved user Label Encoder (while training)
