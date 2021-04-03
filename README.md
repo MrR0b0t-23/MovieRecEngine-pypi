@@ -21,35 +21,36 @@ MovieRecEngine, uses [tez](https://pypi.org/project/tez/) simple pytorch trainer
 
 ## How to use MovieRecEngine
 
-* To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]() dataset.
+* To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]()
 * Create a object for ```Train ``` class in MovieRecEngine library with parameters trainDatasetPath, userLabelEncoderPath, movieLabelEncoderPath, validDatasetSize, trainBatchSize, validBatchSize, device, nEpochs, trainedModelPath, randomState.
 * Train the model by calling ```python train``` function in ```Train``` class.
 
-* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]() dataset.
+* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [sample]()
 *NOTE: "userId" needs to contain 1 unique userId.*
 * Create a object for ```Predict ``` class in MovieRecEngine library with parameters datasetPath, userLabelEncoderPath, movieLabelEncoderPath, trainedModelPath, predictBatchSize, device.
 * Predict user movie ratings by calling ```predict``` function in ```Predict ``` class.
 
 ## Parameters
-- Train class: 
-trainDatasetPath
-userLabelEncoderPath
-movieLabelEncoderPath
-validDatasetSize
-trainBatchSize 
-validBatchSize
-device
-nEpochs
-trainedModelPath
-randomState
+1. Train class: 
+- trainDatasetPath ==> Path for your training Dataset.
+- userLabelEncoderPath ==> Path in which you want to save user Label Encoder (this will be used in your prediction)
+- movieLabelEncoderPath ==> Path in which you want to save movie Label Encoder (this will be used your prediction)
+- validDatasetSize ==> Test size for train_test_split 
+- trainBatchSize ==> The number of train samples to work through before updating the internal model parameters.
+- validBatchSize ==> The number of test samples to work through before updating the internal model parameters.
+- device ==> Device in which you want to train your model 'cuda' or 'cpu'. Default 'cpu'. 
+- nEpochs ==> The number times that the learning algorithm will work through the entire training dataset.
+- trainedModelPath ==> Path to save your trained model (this will be used in your prediction)
+- randomState ==> Random State values for train_test_split
 
--Predict class:
-datasetPath
-userLabelEncoderPath
-movieLabelEncoderPath
-trainedModelPath
-predictBatchSize
-device
+2. Predict class:
+
+- datasetPath
+- userLabelEncoderPath
+- movieLabelEncoderPath
+- trainedModelPath
+- predictBatchSize
+- device
 
 ## Contributing
 
