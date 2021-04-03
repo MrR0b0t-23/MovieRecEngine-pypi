@@ -1,2 +1,13 @@
-## About
-Pytorch based Nerual Network that uses Collabative Filtering techiques to predict user movie ratings based on past ratings given by the user
+#MovieRecEngine
+
+MovieRecEngine means Movie Recommendation Engine. This is a simple collaborative filtering based library using Pytorch Neural Netwrok to make your Movie Recommendation System easy.
+*This library is in very early-stage currently! So, there might be remarkable changes.*
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install MovieRecEngine.
+
+```bash
+pip install MovieRecEngine
+```
+
