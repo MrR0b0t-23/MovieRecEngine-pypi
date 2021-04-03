@@ -17,7 +17,19 @@ MovieRecEngine uses collaborative filtering to find similarities between users a
 
 MovieRecEngine, uses [tez](https://pypi.org/project/tez/) simple pytorch trainer that supports cpu and gpu training.
 
+## How to use MovieRecEngine
+
+* To train a model using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". Example [MovieLenz](https://grouplens.org/datasets/movielens/100k/) dataset.
+* Create a object for ```python Train ``` class in MovieRecEngine library with parameters trainDatasetPath, userLabelEncoderPath, movieLabelEncoderPath, validDatasetSize, trainBatchSize, validBatchSize, device, nEpochs, trainedModelPath, randomState.
+* Train the model by calling ```python train``` function in ```python Train``` class.
+
+* To predict user movie ratings using MovieRecEngine, define a Dataset that contains columns "userId", "movieId", "ratings". 
+*NOTE: "userId" needs to contain 1 unique userId.*
+* Create a object for ```python Predict ``` class in MovieRecEngine library with parameters datasetPath, userLabelEncoderPath, movieLabelEncoderPath, trainedModelPath, predictBatchSize, device.
+* Predict user movie ratings by calling ```python predict``` function in ```python Predict ``` class.
+
 ## Parameters
+
 
 ## Contributing
 
